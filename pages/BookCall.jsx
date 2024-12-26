@@ -44,7 +44,7 @@ const BookCall = () => {
   };
 
   return (
-    <section className="bg-[#F5F5DC] py-16 mt-8"> {/* Added mt-8 for space above */}
+    <section className="bg-[#F5F5DC] py-16">
       <div className="container mx-auto max-w-screen-xl">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">
           Book a Call with Us
@@ -64,7 +64,7 @@ const BookCall = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                   placeholder="Enter your name"
                 />
               </div>
@@ -79,7 +79,7 @@ const BookCall = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                   placeholder="Enter your email"
                 />
               </div>
@@ -94,7 +94,7 @@ const BookCall = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -109,7 +109,7 @@ const BookCall = () => {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                   placeholder="Enter your location"
                 />
               </div>
@@ -123,7 +123,7 @@ const BookCall = () => {
             </label>
             <select
               id="callType"
-              className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
               value={callType}
               onChange={handleCallTypeChange}
             >
@@ -141,7 +141,7 @@ const BookCall = () => {
               </label>
               <select
                 id="details"
-                className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                 value={details}
                 onChange={handleDetailsChange}
               >
@@ -182,7 +182,7 @@ const BookCall = () => {
               </label>
               <select
                 id="timeSlot"
-                className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                 value={timeSlot}
                 onChange={handleTimeSlotChange}
               >
@@ -215,7 +215,7 @@ const BookCall = () => {
                 name="query"
                 value={formData.query}
                 onChange={handleInputChange}
-                className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border rounded-lg bg-[#c5deff] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:p-4 focus:h-16 transition-all"
                 placeholder="Enter your query here"
                 rows="4"
               />
@@ -252,4 +252,3 @@ export default function Home() {
     </>
   );
 }
-
