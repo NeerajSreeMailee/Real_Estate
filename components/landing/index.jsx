@@ -55,9 +55,9 @@ const LandingSection = () => {
       {isClient && (
         <div
           ref={scrollRef}
-          className="flex w-full overflow-x-hidden h-[600px]"
+          className="flex w-full overflow-x-hidden h-[600px] sm:h-[500px] md:h-[550px]"
         >
-          {/* Adjusted Slides to 1470x600 */}
+          {/* Adjusted Slides */}
           <div className="w-full flex-shrink-0 flex justify-center items-center">
             <Image
               src={SlideImage1}

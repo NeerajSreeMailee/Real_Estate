@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#c5deff] border-t py-8">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex justify-between items-start">
+        <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
           {/* Logo and Company Name */}
           <div className="flex flex-col items-start space-y-4">
             <div className="flex items-center space-x-4">
@@ -25,7 +25,7 @@ export const Footer = () => {
             </div>
 
             {/* Social Media Icons Below Company Name */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-4">
               <a
                 href="https://github.com"
                 target="_blank"
@@ -62,7 +62,7 @@ export const Footer = () => {
           </div>
 
           {/* Get In Touch Section */}
-          <div className="flex flex-col items-end space-y-4">
+          <div className="flex flex-col items-start md:items-end space-y-4">
             <h4 className="text-lg font-bold text-gray-900">Get In Touch</h4>
             <a
               href="mailto:socialmydiyas@gmail.com"

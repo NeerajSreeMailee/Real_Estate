@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import { LandingSection } from "../components/landing";
 import Products from "../components/products";
@@ -24,6 +22,15 @@ export default function Home() {
       <Products />
       <Features />
       <Footer />
+      {/* Global Styles for Body */}
+      <style jsx global>{`
+        body {
+          font-family: ${inter.style.fontFamily}, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f9fafb; /* Light background for readability */
+        }
+      `}</style>
     </>
   );
 }

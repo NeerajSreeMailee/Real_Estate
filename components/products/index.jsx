@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 // Import project images
 import ProjectImage1 from "../../assets/project1.avif";
@@ -7,7 +8,6 @@ import ProjectImage3 from "../../assets/project3.avif";
 import ProjectImage4 from "../../assets/project4.jpeg";
 import ProjectImage5 from "../../assets/project5.jpeg";
 import ProjectImage6 from "../../assets/project6.jpg";
-import Image from "next/image";
 
 // Sample projects data
 const projects = [
@@ -85,7 +85,8 @@ const Projects = () => {
       <h2 className="text-5xl font-extrabold text-[#1a1a1a] mb-12 pt-8 text-center">
         Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-xl px-4">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-screen-xl px-4">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

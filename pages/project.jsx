@@ -81,12 +81,12 @@ const ProjectPage = () => {
 
   return (
     <>
-      <Navbar /> 
+      <Navbar />
       <section className="bg-[#c5deff] py-12 mt-12"> {/* Added mt-12 to give space between Navbar and content */}
         {/* Image Slider Section */}
         <section className="relative flex justify-center items-center bg-cover bg-center pt-12">
           {isClient && (
-            <div ref={scrollRef} className="flex w-full overflow-x-hidden h-[600px]">
+            <div ref={scrollRef} className="flex w-full overflow-x-hidden h-[400px] md:h-[600px]">
               {slides.map((slide, index) => (
                 <Slide key={index} src={slide.src} alt={slide.alt} />
               ))}
@@ -95,11 +95,15 @@ const ProjectPage = () => {
         </section>
 
         {/* Project Information Section */}
-        <section className="grid grid-cols-1 gap-12 mt-16 px-8">
-          <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-12 transition-all transform hover:scale-105">About the Project</h2>
-          <div className="p-8">
-            <h3 className="text-2xl font-semibold text-blue-900 mb-6">Key Features</h3>
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="grid grid-cols-1 gap-12 mt-16 px-4 md:px-8">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-blue-900 mb-12 transition-all transform hover:scale-105">
+            About the Project
+          </h2>
+          <div className="p-4 md:p-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-blue-900 mb-6">
+              Key Features
+            </h3>
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <FeatureBox
                   key={index}

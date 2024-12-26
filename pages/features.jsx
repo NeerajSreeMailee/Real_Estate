@@ -5,45 +5,50 @@ import { FaBuilding, FaHome, FaMapMarkerAlt, FaDollarSign } from "react-icons/fa
 const Features = () => {
   return (
     <section className="bg-white py-16">
-      <div className="container mx-auto max-w-screen-xl">
+      <div className="container mx-auto px-4 max-w-screen-xl">
         {/* Centered and Bold Title */}
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">
           Real Estate Features
         </h2>
-        <div className="grid grid-cols-2 gap-8">
-          <div className="flex flex-col items-center justify-center">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Feature 1 */}
+          <div className="flex flex-col items-center justify-center text-center">
             <FaBuilding size={48} className="text-indigo-500 mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Prime Locations
             </h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600">
               Discover properties located in the most sought-after neighborhoods with excellent connectivity.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          {/* Feature 2 */}
+          <div className="flex flex-col items-center justify-center text-center">
             <FaHome size={48} className="text-indigo-500 mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Luxurious Living
             </h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600">
               Experience luxurious living with high-end amenities and spacious, modern designs.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          {/* Feature 3 */}
+          <div className="flex flex-col items-center justify-center text-center">
             <FaMapMarkerAlt size={48} className="text-indigo-500 mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Strategic Accessibility
             </h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600">
               Our properties are strategically located with easy access to shopping centers, schools, and transport hubs.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          {/* Feature 4 */}
+          <div className="flex flex-col items-center justify-center text-center">
             <FaDollarSign size={48} className="text-indigo-500 mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Competitive Pricing
             </h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600">
               Offering competitive prices with flexible payment plans to help you invest in your dream property.
             </p>
           </div>

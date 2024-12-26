@@ -3,12 +3,12 @@ import { FaBuilding, FaHome, FaMapMarkerAlt, FaDollarSign } from "react-icons/fa
 function Features() {
   return (
     <section className="bg-[#F5F5DC] py-16">
-      <div className="container mx-auto max-w-screen-xl">
+      <div className="container mx-auto max-w-screen-xl px-4">
         {/* Centered and Bold Title */}
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">
           Real Estate Features
         </h2>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-center justify-center">
             <FaBuilding size={48} className="text-indigo-500 mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
