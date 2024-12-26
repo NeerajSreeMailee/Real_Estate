@@ -1,10 +1,19 @@
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../assets/logo.avif"; // Replace with your actual logo path
 
 const Navbar = () => {
+  // State for mobile menu toggle
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <nav className="h-16 flex items-center justify-between px-4 sm:px-8 md:px-16 mx-auto mt-4">
+    <nav className="h-16 flex items-center justify-between px-4 sm:px-8 md:px-16 mx-auto mt-4 relative">
       {/* Left: Logo */}
       <div className="flex items-center flex-shrink-0">
         <Image src={Logo} alt="Logo" width={80} height={80} className="object-contain" />
@@ -55,7 +64,10 @@ const Navbar = () => {
 
       {/* Mobile Menu Toggle (Hamburger Menu) */}
       <div className="flex md:hidden items-center">
-        <button className="text-gray-700 hover:text-gray-900 focus:outline-none">
+        <button
+          onClick={toggleMobileMenu}
+          className="text-gray-700 hover:text-gray-900 focus:outline-none"
+        >
           <svg
             className="w-8 h-8"
             xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +87,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg hidden">
+      <div
+        className={`md:hidden absolute top-16 left-0 w-full bg-white shadow-lg transition-transform transform ${
+          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <ul className="flex flex-col items-center py-4 space-y-4 text-lg">
           <li>
             <Link href="/">
