@@ -83,7 +83,7 @@ export default function BookCall() {
           </div>
         ) : (
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* Only display name, email, phone, and location for Zoom Call */}
+            {/* Input fields for Zoom Call */}
             {callType === 'zoomCall' && (
               <>
                 <div>
@@ -148,7 +148,7 @@ export default function BookCall() {
               </>
             )}
 
-            {/* First Dropdown: Select Call Type */}
+            {/* Dropdown for Call Type */}
             <div>
               <label htmlFor="callType" className="block text-base sm:text-lg font-medium text-gray-700 mb-2">
                 Choose Call Type
@@ -165,7 +165,7 @@ export default function BookCall() {
               </select>
             </div>
 
-            {/* Second Dropdown: Select Details Based on Call Type */}
+            {/* Details Dropdown */}
             {callType && (
               <div>
                 <label htmlFor="details" className="block text-base sm:text-lg font-medium text-gray-700 mb-2">
@@ -195,7 +195,7 @@ export default function BookCall() {
               </div>
             )}
 
-            {/* Time Slot Section */}
+            {/* Time Slot Selection */}
             {details === 'timeSlot' && (
               <div>
                 <label htmlFor="timeSlot" className="block text-base sm:text-lg font-medium text-gray-700 mb-2">
