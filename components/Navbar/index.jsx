@@ -88,11 +88,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-white shadow-lg transition-transform transform ${
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+        className={`md:hidden absolute top-16 left-0 w-full bg-white shadow-lg transition-all ease-in-out duration-300 ${
+          isMobileMenuOpen ? "max-h-[500px] py-4" : "max-h-0 py-0 overflow-hidden"
         }`}
       >
-        <ul className="flex flex-col items-center py-4 space-y-4 text-lg">
+        <ul className="flex flex-col items-center space-y-4 text-lg">
           <li>
             <Link href="/">
               <a className="text-gray-700 transition duration-300 ease-in-out hover:text-gray-900">
